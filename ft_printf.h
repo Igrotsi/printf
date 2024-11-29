@@ -6,12 +6,12 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 17:05:06 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/29 16:45:32 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:13:35 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <ctype.h>
 # include <limits.h>

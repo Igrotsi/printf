@@ -6,15 +6,15 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 17:41:45 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/29 19:05:59 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/29 21:15:24 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
 
 static int	ft_strlen(char *str)
@@ -51,6 +51,7 @@ static int	printstr(char *str)
 	while (str[i])
 	{
 		write(1, &str[i], 1);
+		i++;
 	}
 	return (i);
 }
@@ -61,7 +62,7 @@ static int	sort_params(const char c, va_list args)
 
 	len = 0;
 	if (c == 'c')
-		len += write(1, va_arg(args, char), 1);
+		len += ft_putchar(va_arg(args, int));
 	if (c == 's')
 		len += printstr(va_arg(args, char *));
 	if (c == 'd' || c == 'i')
@@ -73,7 +74,7 @@ static int	sort_params(const char c, va_list args)
 	if (c == 'x')
 		len += ft_putnbr_base(va_arg(args, int), "0123456789abcdef");
 	if (c == '%')
-		len += write(1, va_arg(args, char), 1);
+		len += ft_putchar(va_arg(args, int));
 	if (c == 'p')
 	{
 		printstr("0x");
