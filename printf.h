@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 17:05:06 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/28 17:13:07 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:45:32 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdarg.h> 
+
+int	ft_printf(const char *format, ...);
 
 #endif
